@@ -6,21 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-          <h1>Federal universities</h1>
-          <table id="table1">
-            <th>
-               <td>S/N</td>
-               <td>University</td>
-            </th>
-          </table>
-    </div>
-     
+      <div id="table1">
+
+      </div>
 </body>
 
 
 <script>
     var table1 = document.getElementById('table1');
-    
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET','https://adesanwo-hassan.github.io/Nigeria-Higher-Institution-API/',true);
+    xhttp.onload = function(){
+        var res = xhttp.responseText;
+        table1.innerHTML = res;
+        console.log(res);
+    }
+    xhttp.send();
 </script>
 </html>
