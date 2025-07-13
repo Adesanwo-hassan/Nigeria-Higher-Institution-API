@@ -1,0 +1,1 @@
+# An api to generate a list of all Accredited higher institution in Nigeria
